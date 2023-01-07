@@ -49,15 +49,27 @@ fn hangman() -> bool {
             wrong_guesses += 1;
         }
 
+        // let new hashed word = hashed word but as a vector :)
         let mut new_hashed_word: Vec<char> = hashed_word.chars().collect();
+
+        // check if the word has the guessed letter
+        // if so, replace the hash with guessed letter
+        // else keep the hash
+
+        // also make sure to make the hashed word now equal to the new_hashed_word
+
+        // check to ENSURE that new hashed word is cleaned with each loop! 
+
+        
+
         if word.contains(guessedLetter) {
-            for i in 0..word.len() {
-                if new_hashed_word.get(i).unwrap() == &guessedLetter {
-                    new_hashed_word[i] = guessedLetter;
+            for i in word.to_string().chars() {
+                if i == guessedLetter {
+                    new_hashed_word. = guessedLetter;
                     println!("yo they guessed it, here's new hashed word: {:?}", new_hashed_word);
                 } else {
                     new_hashed_word[i] = '#';
-                    println!("lmao they didn't guess it, new hashed word is: {:?}", new_hashed_word);
+                    println!("{} is guess letter. lmao they didn't guess it, new hashed word is: {:?}", &guessedLetter, new_hashed_word);
                 }
             }
         }
