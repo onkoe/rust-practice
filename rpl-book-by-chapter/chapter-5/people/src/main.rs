@@ -22,17 +22,17 @@ impl Person {
 
     fn set_name(mut self, new_name: String) -> Person {
         self.name = new_name;
-        return self;
+        self
     }
 
     fn set_age(mut self, new_age: u8) -> Person {
         self.age = new_age;
-        return self;
+        self
     }
 
     fn set_email(mut self, new_email: String) -> Person {
         self.email = new_email;
-        return self;
+        self
     }
 }
 
